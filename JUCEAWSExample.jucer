@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="e8SpnQ" name="JUCEAWSExample" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="o84vbl" name="JUCEAWSExample">
+    <GROUP id="{B461015A-C5EB-CB66-EB13-B9191FC91A3F}" name="source">
+      <FILE id="wc8Eom" name="Main.cpp" compile="1" resource="0" file="source/Main.cpp"/>
+      <FILE id="bvr2LH" name="MainComponent.h" compile="0" resource="0" file="source/MainComponent.h"/>
+      <FILE id="OdguDU" name="MainComponent.cpp" compile="1" resource="0"
+            file="source/MainComponent.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_WEB_BROWSER="0" JUCE_USE_WIN_WEBVIEW2="0"
+               JUCE_ENABLE_LIVE_CONSTANT_EDITOR="0"/>
+  <EXPORTFORMATS>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="JUCEAWSExample" headerPath="C:/Program Files (x86)/OpenSSL-Win32/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin"
+                       postbuildCommand="for /r &quot;C:/Program Files (x86)/OpenSSL-Win32/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)Win32\Debug\App&quot;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="JUCEAWSExample" headerPath="C:/Program Files (x86)/OpenSSL-Win32/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin"
+                       postbuildCommand="for /r &quot;C:/Program Files (x86)/OpenSSL-Win32/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)Win32\Release\App&quot;"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="JUCEAWSExample" headerPath="C:\Program Files\OpenSSL-Win64\include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       libraryPath="C:\Program Files\OpenSSL-Win64\bin" postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Debug\App&quot;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="JUCEAWSExample" headerPath="C:\Program Files\OpenSSL-Win64\include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       libraryPath="C:\Program Files\OpenSSL-Win64\bin" postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Release\App&quot;"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_analytics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_product_unlocking" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_osc" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_blocks_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_box2d" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="squarepine_aws" path="."/>
+      </MODULEPATHS>
+    </VS2019>
+    <XCODE_MAC targetFolder="Builds/macOS" externalLibraries="ssl&#10;crypto">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="JUCEAWSExample" headerPath="/usr/local/ssl/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       libraryPath="/usr/local/ssl/lib"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="JUCEAWSExample" headerPath="/usr/local/ssl/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
+                       libraryPath="/usr/local/ssl/lib"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_analytics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_video" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_product_unlocking" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_osc" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_blocks_basics" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_box2d" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="submodules/JUCE/modules"/>
+        <MODULEPATH id="squarepine_aws" path="."/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_analytics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_blocks_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_box2d" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_product_unlocking" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="squarepine_aws" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>

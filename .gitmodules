@@ -1,0 +1,9 @@
+[submodule "submodules/aws-sdk-cpp"]
+	path = submodules/aws-sdk-cpp
+	url = https://github.com/aws/aws-sdk-cpp.git
+[submodule "submodules/openssl"]
+	path = submodules/openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "submodules/JUCE"]
+	path = submodules/JUCE
+	url = https://github.com/juce-framework/JUCE.git
