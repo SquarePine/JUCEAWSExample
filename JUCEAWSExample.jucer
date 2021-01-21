@@ -16,15 +16,17 @@
     <VS2019 targetFolder="Builds/VisualStudio2019">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="JUCEAWSExample" headerPath="C:/Program Files (x86)/OpenSSL-Win32/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
-                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin"
+                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin&#10;../../submodules/aws-sdk-cpp"
                        postbuildCommand="for /r &quot;C:/Program Files (x86)/OpenSSL-Win32/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)Win32\Debug\App&quot;"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="JUCEAWSExample" headerPath="C:/Program Files (x86)/OpenSSL-Win32/include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
-                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin"
+                       winArchitecture="Win32" libraryPath="C:/Program Files (x86)/OpenSSL-Win32/bin&#10;../../submodules/aws-sdk-cpp"
                        postbuildCommand="for /r &quot;C:/Program Files (x86)/OpenSSL-Win32/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)Win32\Release\App&quot;"/>
         <CONFIGURATION isDebug="1" name="Debug" targetName="JUCEAWSExample" headerPath="C:\Program Files\OpenSSL-Win64\include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
-                       libraryPath="C:\Program Files\OpenSSL-Win64\bin" postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Debug\App&quot;"/>
+                       libraryPath="C:\Program Files\OpenSSL-Win64\bin&#10;../../submodules/aws-sdk-cpp"
+                       postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Debug\App&quot;"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="JUCEAWSExample" headerPath="C:\Program Files\OpenSSL-Win64\include&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-core/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-s3/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-idp/include/&#10;../../submodules/aws-sdk-cpp/aws-cpp-sdk-cognito-identity/include/"
-                       libraryPath="C:\Program Files\OpenSSL-Win64\bin" postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Release\App&quot;"/>
+                       libraryPath="C:\Program Files\OpenSSL-Win64\bin&#10;../../submodules/aws-sdk-cpp"
+                       postbuildCommand="for /r &quot;C:/Program Files/OpenSSL-Win64/bin/&quot; %%f in (*.*) do @xcopy /y &quot;%%f&quot; &quot;$(SolutionDir)x64\Release\App&quot;"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_gui_extra" path="submodules/JUCE/modules"/>

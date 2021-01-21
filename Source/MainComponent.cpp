@@ -32,13 +32,13 @@ void MainComponent::paint (juce::Graphics& g)
     g.fillAll (c);
 
     const std::string source = "test";
-    const auto result = base64Encode (source);
+    const auto r = base64Encode (source);
     jassert (r == "dGVzdA==");
 
     juce::String message;
     message
         << "From: " << source << juce::newLine
-        << "To: " << result << juce::newLine;
+        << "To: " << r << juce::newLine;
 
     g.setColour (c.contrasting());
 

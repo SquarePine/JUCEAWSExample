@@ -1,40 +1,46 @@
-class Aws::CognitoIdentityProvider::CognitoIdentityProviderClient;
-
-class AWSUserAuthentication
+/** */
+class AWSUserAuthentication final
 {
 public:
-    AWSUserAuthentication (const std::string &username, const std::string &password,
-                           const std::string &user_pool, const std::string client_id,
-                           const std::string region_id);
+    /** */
+    AWSUserAuthentication (const String& username, const String& password,
+                           const String& userPool, const String& clientId,
+                           const String& regionId);
 
+    /** */
     ~AWSUserAuthentication();
 
-    void GenerateSRPAValues();
-    bool InitiateAuthentication();
+    //==============================================================================
+    /** */
+    void generateSRPAValues();
 
-    Aws::String GenerateChallengeParameters(const Aws::String &salt,
-                                            const Aws::String &srp_b,
-                                            const Aws::String &secret_block,
-                                            const Aws::String &time_str);
+    /** */
+    bool initiateAuthentication();
 
-    void AWSUserAuthentication::getPasswordAuthenticationKey(const Aws::String &salt, const Aws::String &srp_b, std::vector<unsigned char> &key);
+    /** */
+    Aws::String generateChallengeParameters (const String& salt,
+                                             const String& srp_b,
+                                             const String& secret_block,
+                                             const String& time_str);
+
+    /** */
+    Array<int8> getPasswordAuthenticationKey (const String& salt, const String& srp_b);
 
 private:
-    std::string username_;
-    std::string password_;
-    std::string user_pool_;
-    std::string client_id_;
-    std::string region_id_;
+    //==============================================================================
+    String username, password, userPool,
+           clientId, regionId,
+           srpa, srpA;
 
-    BIGNUM* bn_N_ = nullptr;
-    BIGNUM* bn_g_ = nullptr;
-    BIGNUM* bn_k_ = nullptr;
-    BIGNUM* bn_random_ = nullptr;
-    BIGNUM* bn_a_ = nullptr;
-    BIGNUM* bn_A_ = nullptr;
+    BIGNUM* bn_N_ = BN_new();
+    BIGNUM* bn_g_ = BN_new();
+    BIGNUM* bn_k_ = BN_new();
+    BIGNUM* bn_random_ = BN_new();
+    BIGNUM* bn_a_ = BN_new();
+    BIGNUM* bn_A_ = BN_new();
 
-    std::string srp_a_string_;
-    std::string srp_A_string_;
+    std::shared_ptr<Aws::CognitoIdentityProvider::CognitoIdentityProviderClient> client;
 
-    std::shared_ptr<Aws::CognitoIdentityProvider::CognitoIdentityProviderClient> cognito_client_;
+    //==============================================================================
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AWSUserAuthentication)
 };

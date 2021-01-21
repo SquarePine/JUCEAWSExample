@@ -7,9 +7,9 @@
     vendor:             SquarePine
     version:            0.1.0
     name:               SquarePine AWS
-    description:        An AWS wrapper for JUCE projects.
+    description:        A small set of AWS wrappers for JUCE projects.
     website:            https://www.squarepine.io
-    license:            Proprietary
+    license:            MIT
     minimumCppStandard: 11
     dependencies:       juce_data_structures
 
@@ -56,6 +56,9 @@ extern "C"
 namespace sp
 {
     using namespace juce;
+
+    #include "core/OpenSSLUtilities.h"
+    #include "core/AWSAuthentication.h"
 }
 
 #endif //SQUAREPINE_AWS_H
